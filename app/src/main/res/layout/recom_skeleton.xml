@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/poster_width"
+        android:layout_height="@dimen/poster_height"
+        android:layout_marginVertical="@dimen/poster_vertical_margin"
+        android:layout_marginStart="@dimen/poster_vertical_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/recom_CARD_data"
+        app:layout_constraintStart_toStartOf="@id/recom_CARD_data"
+        android:elevation="@dimen/poster_elevation"
+        app:cardElevation="@dimen/poster_elevation"
+        app:cardCornerRadius="@dimen/poster_corner_radius">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            tools:src="@drawable/splash_gradient_background" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recom_CARD_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/data_start_margin"
+        android:elevation="@dimen/data_elevation"
+        app:cardElevation="@dimen/data_elevation"
+        app:cardCornerRadius="@dimen/poster_corner_radius"
+        android:layout_marginVertical="@dimen/data_end_margin"
+        android:layout_marginEnd="@dimen/data_end_margin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/data_start_margin"
+            android:layout_marginEnd="@dimen/data_end_margin">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/favorite_button"
+                android:layout_width="@dimen/heart_dimens"
+                android:layout_height="@dimen/heart_dimens"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/heart_margin"
+                android:layout_marginEnd="@dimen/heart_margin"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/empty_heart" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@id/favorite_button"
+                android:layout_marginStart="@dimen/data_end_margin"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:maxLines="2"
+                android:minLines="2"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold"
+                tools:text="title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/posted_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_alignStart="@id/title"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textSize="@dimen/data_text_size"
+                android:textColor="@color/black"
+                tools:text="2024-01-01" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/posted_on"
+                android:layout_alignStart="@id/title"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textSize="@dimen/data_text_size"
+                android:textColor="@color/black"
+                tools:text="username" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username"
+                android:layout_alignStart="@id/title"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textSize="@dimen/data_text_size"
+                android:textColor="@color/black"
+                tools:text="category" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/category"
+                android:layout_alignStart="@id/title"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:maxLines="3"
+                android:minLines="1"
+                android:textSize="@dimen/data_text_size"
+                android:textColor="@color/black"
+                tools:text="description" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description"
+                android:layout_alignStart="@id/title"
+                android:layout_marginTop="@dimen/data_end_margin"
+                android:layout_marginEnd="@dimen/data_end_margin"
+                android:maxLines="3"
+                android:minLines="1"
+                android:textSize="@dimen/data_text_size"
+                android:textColor="@color/black"
+                android:clickable="true"
+                android:focusable="true"
+                tools:text="link or location" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rating"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/link"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="@dimen/data_end_margin"
+                android:progressTint="@color/yellow_400"
+                android:secondaryProgressTint="@color/orange_400"
+                tools:rating="0"
+                android:stepSize="0.5" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

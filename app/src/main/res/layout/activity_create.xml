@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateActivity">
+
+    <!-- Back Button and Create -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:background="@color/deep_orange_100"
+        >
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/arrow_left"
+            android:backgroundTint="@color/deep_orange_100"
+            android:background="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/create_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="create"
+            android:textSize="25sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/top_bar"
+        android:padding="40dp"
+        >
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Your Recommendation:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+             />
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="give a name "
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Rating Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating (out of 5)"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Rating Bar -->
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Review Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Write a Review"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Review Input -->
+        <EditText
+            android:id="@+id/overview_bar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="tell us what you think"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Categories Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Categories/Tags"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Categories Spinner -->
+        <Spinner
+            android:id="@+id/category_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/categories"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Location Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Location Input -->
+        <EditText
+            android:id="@+id/link_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="website link or store location"
+            android:layout_marginTop="8dp" />
+
+        <!-- Image Upload Button -->
+        <Button
+            android:id="@+id/image_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Image"
+            android:layout_marginHorizontal="90dp"
+            android:backgroundTint="@color/deep_orange_100"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <!-- Upload Button -->
+        <Button
+            android:id="@+id/publish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Recommendation"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/deep_orange_100"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+</RelativeLayout>

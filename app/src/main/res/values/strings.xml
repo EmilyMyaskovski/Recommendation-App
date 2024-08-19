@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Recom</string>
+    <string name="click_on_me">click on me :)</string>
+    <string-array name="categories">
+        <item>Food</item>
+        <item>Travel</item>
+        <item>Entertainment</item>
+        <item>Gaming</item>
+        <item>Clothes</item>
+        <item>LifeStyle</item>
+        <item>SALE</item>
+        <item>Care and beauty</item>
+    </string-array>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "878597204643",
+    "firebase_url": "https://recom-e8c98-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "recom-e8c98",
+    "storage_bucket": "recom-e8c98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878597204643:android:a419bd985554f24195ed16",
+        "android_client_info": {
+          "package_name": "com.example.recom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878597204643-vnm0hsbbscfson50heqom4a492q63glr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5vMlcCcQO4GTF9zr0hKnY2wRl1KymIy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878597204643-vnm0hsbbscfson50heqom4a492q63glr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
